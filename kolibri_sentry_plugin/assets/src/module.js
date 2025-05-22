@@ -4,6 +4,8 @@ import plugin_data from 'kolibri-plugin-data';
 import Vue from 'vue';
 import store from 'kolibri/store';
 import { currentLanguage } from 'kolibri/utils/i18n';
+import { useUser } from 'kolibri/composables';
+import { watch } from 'vue';
 
 if (plugin_data.sentryDSN) {
   const initOptions = {
@@ -38,16 +40,31 @@ if (plugin_data.sentryDSN) {
       }
     },
   );
-  store.watch(
-    state => state.session,
-    session => {
-      Sentry.setUser({
-        id: session.user_id,
-        full_name: session.full_name,
-        username: session.username,
-        facility_id: session.facility_id,
-        type: JSON.stringify(session.kind),
-      });
+
+  const {
+    currentUserId,
+    full_name,
+    username,
+    facility_id,
+    kind,
+    isUserLoggedIn,
+  } = useUser();
+
+  watch(
+    () => currentUserId.value, // Watch the .value of the currentUserId ref
+    newUserIdValue => { // Renamed for clarity: this is the new value of currentUserId.value
+      if (isUserLoggedIn.value) {
+        Sentry.setUser({
+          id: newUserIdValue, // Map currentUserId.value to Sentry's 'id' field
+          full_name: full_name.value,
+          username: username.value,
+          facility_id: facility_id.value,
+          type: JSON.stringify(kind.value), // kind itself is a ref
+        });
+      } else {
+        Sentry.setUser(null);
+      }
     },
+    { immediate: true },
   );
 }
