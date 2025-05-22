@@ -4,7 +4,7 @@ import plugin_data from 'kolibri-plugin-data';
 import Vue from 'vue';
 import store from 'kolibri/store';
 import { currentLanguage } from 'kolibri/utils/i18n';
-import { useUser } from 'kolibri/composables';
+import useUser from 'kolibri/composables/useUser';
 import { watch } from 'vue';
 
 if (plugin_data.sentryDSN) {
