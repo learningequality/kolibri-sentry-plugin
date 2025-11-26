@@ -36,7 +36,7 @@ setup(
     install_requires=["sentry-sdk==2.45.0"],
     extras_require={
         "dev": {
-            "pre-commit==4.4.0",
+            "pre-commit==4.5.0",
         },
     },
     include_package_data=True,
