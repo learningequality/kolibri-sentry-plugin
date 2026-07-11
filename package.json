@@ -16,7 +16,7 @@
     "kolibri-plugin-data": "^1.0.0"
   },
   "devDependencies": {
-    "kolibri-format": "^1.0.1",
+    "kolibri-format": "^2.4.0",
     "kolibri-tools": "^0.18.2"
   },
   "browserslist": [
