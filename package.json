@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@sentry/vue": "^10.19.0",
-    "browserslist-config-kolibri": "^0.18.0",
+    "browserslist-config-kolibri": "^0.20.0",
     "kolibri": "^0.18.0",
     "kolibri-plugin-data": "^1.0.0"
   },
