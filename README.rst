@@ -1,4 +1,4 @@
-This repository has been archived! The Kolibri plugin has been moved to the Kolibri monorepo - https://github.com/learningequality/kolibri/tree/develop/platforms/raspberry-pi
+This repository has been archived! The Kolibri plugin has been moved to the Kolibri monorepo - https://github.com/learningequality/kolibri/tree/develop/python_packages/kolibri-sentry-plugin
 ==============================================================================================================================================================================
 
 Kolibri External Plugin Template
