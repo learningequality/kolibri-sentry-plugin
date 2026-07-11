@@ -6575,10 +6575,10 @@ kolibri-logging@^1.0.0:
     chalk "^4.1.2"
     loglevel "^1.9.1"
 
-kolibri-plugin-data@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/kolibri-plugin-data/-/kolibri-plugin-data-1.0.0.tgz#8fd11332e22a73702e6d9214846e7dbe3228c3e6"
-  integrity sha512-rSotPFix35DKlx0/rFBwKCYi6qIMwFH6DYl0oDjXe71QwZ/gReL5/FBAqbu90vbe1TjZ+n9c1i85JRGl1uvRDQ==
+kolibri-plugin-data@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/kolibri-plugin-data/-/kolibri-plugin-data-1.0.1.tgz#46a325b834af0011f678f820f03a1861baa8e964"
+  integrity sha512-HEPGSgvwdjMT329Ors3FzJDe0VZwRAhDt/Ap2iMluhGSP4aE8KoNGapDDt29hSdzAUQVUbt1uM9MZCcDWlgA0w==
 
 kolibri-tools@^0.18.2:
   version "0.18.2"
